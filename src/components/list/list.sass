@@ -1,0 +1,92 @@
+@use "../../styles"
+
+.list
+    .welcome_text
+        display: inline-block
+        font-size: 2rem
+        font-weight: 700
+        padding: 0.75rem
+        
+    .container
+        width: 18rem
+        position: absolute
+        left: 0
+        right: 0
+        margin: auto
+        
+        li
+            min-height: 3rem
+            display: flex
+            flex-direction: row
+            background: ivory
+            padding: .5rem
+            border-radius: 4rem
+            margin: .1rem
+            
+        .text
+            display: flex
+            flex-direction: column
+            justify-content: center
+            overflow-x: scroll
+            /* Hide scrollbar for IE, Edge and Firefox */
+            -ms-overflow-style: none // IE and Edge
+            scrollbar-width: none // Firefox 
+            
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .text::-webkit-scrollbar 
+            display: none
+            
+        .checkbox_container
+            display: flex
+            flex-direction: column
+            justify-content: center
+            min-height: 100%
+            
+        .checkbox
+            display: flex
+            flex-direction: column
+            justify-content: center
+            height: 1rem
+            width: 1rem
+            border-radius: 50%
+            margin: 0 .5rem
+            
+        .innerbox
+            background: styles.$ligth_theme_bg
+            display: flex
+            align-self: center
+            height: .65rem
+            width: .65rem
+            border-radius: 50%
+            
+        .checked
+            .text
+                text-decoration: line-through
+            
+            .innerbox
+                background: inherit
+                flex-direction: column
+                justify-content: center
+                align-content: center
+                
+            .innerbox::after
+                content: "\2713"
+                color: white
+                text-align: center
+                font-size: .75rem
+                
+    .progress_bar_container
+        border-bottom: 0.01rem solid black
+        padding: .5rem 1rem
+        
+        .text
+            font-size: 1.5rem
+            font-weight: 600
+        
+        .progress_bar
+            display: inline-block
+            width: 70vw
+            height: .75rem
+            border-radius: 4rem
+            font-size: .75rem
+            text-align: center

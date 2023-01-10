@@ -1,0 +1,104 @@
+@use "../../styles"
+
+.notes
+    .text
+        display: inline-block
+        padding: .5rem
+        font-size: 2rem
+        font-weight: 700
+        
+        span
+            font-size: 1.5rem
+            font-weight: 500
+            
+    .note_container
+        display: grid
+        grid-template-columns: 47.5% 47.5%
+        grid-column-gap: 5%
+        grid-row-gap: 1rem
+        padding: .5rem
+        height: 13.5rem
+        
+        .note_div
+            background: styles.$note_bg
+            border-radius: 10px
+            
+        .edit_note_icon
+            width: 1.5rem
+            height: 1.5rem
+            padding-top: .2rem
+            margin: .25rem
+            
+        .delete_icon
+            width: 2rem
+            height: 2rem
+            margin: .25rem
+            
+        .note_head
+            background: styles.$theme_blue
+            border-top-right-radius: 10px
+            border-top-left-radius: 10px
+            
+        .note_body
+            padding: .5rem
+            overflow: hidden
+            height: 9.5rem
+            
+        .note_div::after
+            content: ""
+            display: block
+            background-image: linear-gradient(to right, transparent , styles.$note_bg 80%)
+            height: 1rem
+            position: relative
+            bottom: 1rem
+            
+        .category
+            display: block
+            height: .5rem
+            border-top-right-radius: 10px
+            border-top-left-radius: 10px
+            
+        .row
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            
+        .icons
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            
+    .full_text
+        height: 100vh
+        width: 100vw
+        background: styles.$transparent_ash
+        position: absolute
+        top: 0
+        left: 0
+        
+        .inner_div
+            height: 75vh
+            width: 60vw
+            background: white
+            position: absolute
+            margin: auto
+            top: 0
+            left: 0
+            bottom: 5rem
+            right: 0
+            
+    @media only screen and (min-width: 640px)
+        .note_container
+            display: grid
+            grid-template-columns: 30.85% 30.8% 30.85%
+            grid-column-gap: 2.5%
+            grid-row-gap: 1rem
+            padding: .5rem
+            
+    @media only screen and (min-width: 960px)
+        .note_container
+            display: grid
+            grid-template-columns: 23.5% 23.5% 23.5% 23.5% 
+            grid-column-gap: 2%
+            grid-row-gap: 1rem
+            padding: .5rem

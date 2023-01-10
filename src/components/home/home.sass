@@ -1,0 +1,91 @@
+@use "../../styles"
+
+.home
+    nav
+        height: 3rem
+        background: styles.$theme_blue
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding: 0 .75rem
+        
+    span
+        align-self: center
+        
+    .sidebar
+        flex-direction: column
+        background: white
+        width: 60vw
+        z-index: 100
+        position: absolute
+        top: 0
+        border-bottom-right-radius: 1rem
+        background: slategrey
+        
+    .sidebar_x
+        width: 3rem
+        
+    .close
+        display: block
+        width: 100%
+        
+    .navLink
+        color: black
+        height: 2.5rem
+        padding: .5rem
+        
+    .logo
+        display: inline-block
+        font-family: 'Pacifico', cursive
+        font-size: 1.5rem
+        
+    .menu_icon
+        height: 1rem
+        width: 1rem
+        
+    .filter_menu
+        display: flex
+        flex-direction: column
+        background: slategrey
+        min-height: 10rem
+        min-width: 10rem
+        position: absolute
+        top: 0
+        right: 0
+        padding: 0 .5rem
+        z-index: 200
+        
+        .filter_x
+            width: 2rem
+            
+        .filter_close
+            display: flex
+            width: 90%
+            height: 2.5rem
+            border-bottom: .1rem solid black
+            overflow: scroll
+            white-space: nowrap
+            
+        .filter_option
+            display: flex
+            flex-direction: row
+            height: 2.5rem
+            width: 90%
+            border-bottom: .1rem solid black
+            align-content: center
+            justify-content: space-between
+            line-height: 2.5rem
+            
+        .filter_color
+            display: inline-block
+            background: styles.$theme_blue
+            width: 1rem
+            height: 1rem
+            
+    @media only screen and (min-width: 640px)
+        .sidebar
+            width: 45vw
+            
+    @media only screen and (min-width: 960px)
+        .sidebar
+            width: 30vw

@@ -1,0 +1,47 @@
+@use "../../styles"
+
+.edit
+    .editIcon_div
+        height: 4rem
+        width: 4rem
+        background: styles.$theme_blue
+        border-radius: 50%
+        display: flex
+        flex-direction: column
+        align-content: center
+        justify-content: center
+        text-align: center
+        position: fixed
+        bottom: 2rem
+        right: 2rem
+        
+    .editIcon
+        width: 2rem
+        height: 2rem
+        margin: 1rem
+        
+    %navLink
+        background: styles.$theme_blue
+        border: none
+        border-radius: 4rem
+        height: 2rem
+        width: 10rem
+        position: fixed
+        right: 2rem
+        padding: .5rem .5rem
+        color: black
+        
+    %navLink:hover
+        background: styles.$hover_theme_blue
+        
+    .delete
+        @extend %navLink
+        bottom: 13rem
+        
+    .add_note
+        @extend %navLink
+        bottom: 10rem
+        
+    .add_task
+        @extend %navLink
+        bottom: 7rem
