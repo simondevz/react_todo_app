@@ -1,8 +1,4 @@
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./home/home";
 import List from "./list/list";
@@ -14,15 +10,18 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} >
+                <Route path="/" element={<Home />}>
                     <Route index element={<List />} />
-                    <Route path="/tasks" element={<List />} />
-                    <Route path="/notes" element={<Notes />} />
+                    <Route path="/tasks" element={<List />}>
+                        <Route path="create" element={<Input />} />
+                    </Route>
+                    <Route path="/notes" element={<Notes />}>
+                        <Route path="create" element={<Input />} />
+                    </Route>
                 </Route>
-                <Route path="/create" element={<Input />} />
             </Routes>
         </BrowserRouter>
-    )
+    );
 }
 
-export default App
+export default App;

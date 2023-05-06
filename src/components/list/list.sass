@@ -3,9 +3,23 @@
 .list
     .welcome_text
         display: inline-block
-        font-size: 2rem
-        font-weight: 700
-        padding: 0.75rem
+        font-size: 32px
+        font-weight: 500
+        padding: .75rem 0
+        color: styles.$textWhite
+        
+    .category_text
+        display: block
+        font-size: 16px
+        font-weight: 500
+        color: styles.$ligthblue
+        padding: .75rem 0
+        
+    h2
+        font-size: 16px
+        font-weight: 500
+        color: styles.$ligthblue
+        padding: 1rem 0 .25rem
         
     .container
         width: 18rem
@@ -13,21 +27,23 @@
         left: 0
         right: 0
         margin: auto
+        overflow-y: scroll
         
         li
             min-height: 3rem
             display: flex
             flex-direction: row
-            background: ivory
+            background: styles.$darkblue
             padding: .5rem
-            border-radius: 4rem
-            margin: .1rem
+            border-radius: 1.25rem
+            margin: .25rem .1rem
             
         .text
             display: flex
             flex-direction: column
             justify-content: center
             overflow-x: scroll
+            color: styles.$textWhite
             /* Hide scrollbar for IE, Edge and Firefox */
             -ms-overflow-style: none // IE and Edge
             scrollbar-width: none // Firefox 
@@ -52,7 +68,7 @@
             margin: 0 .5rem
             
         .innerbox
-            background: styles.$ligth_theme_bg
+            background: styles.$darkblue
             display: flex
             align-self: center
             height: .65rem
@@ -76,17 +92,26 @@
                 font-size: .75rem
                 
     .progress_bar_container
-        border-bottom: 0.01rem solid black
-        padding: .5rem 1rem
+        background-color: styles.$darkblue
+        color: styles.$textWhite
+        padding: 1.5rem 1rem .5rem
+        height: 6.5rem
+        width: 80vw
+        border-radius: 1rem
+        
+        .no_of_tasks
+            font-size: 12px
+            color: styles.$ligthblue
         
         .text
-            font-size: 1.5rem
-            font-weight: 600
+            font-size: 24px
+            font-weight: 500
+            padding-top: .75rem
         
         .progress_bar
             display: inline-block
             width: 70vw
-            height: .75rem
+            height: .12rem
             border-radius: 4rem
             font-size: .75rem
             text-align: center

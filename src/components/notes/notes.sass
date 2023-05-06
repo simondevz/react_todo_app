@@ -3,71 +3,108 @@
 .notes
     .text
         display: inline-block
-        padding: .5rem
-        font-size: 2rem
+        color: styles.$textWhite
+        font-size: 32px
         font-weight: 700
         
         span
-            font-size: 1.5rem
+            font-size: 24px
             font-weight: 500
             
     .note_container
-        display: grid
-        grid-template-columns: 47.5% 47.5%
-        grid-column-gap: 5%
-        grid-row-gap: 1rem
-        padding: .5rem
-        height: 13.5rem
-        
+        /*  
+            display: grid
+            grid-template-columns: 47.5% 47.5%
+            grid-column-gap: 5%
+            grid-row-gap: 1rem
+            padding: .5rem
+            height: 13.5rem
+            
         .note_div
             background: styles.$note_bg
             border-radius: 10px
+            width: 90vw
+            //height: 9.5rem
+            margin: .5rem 0
             
         .edit_note_icon
             width: 1.5rem
             height: 1.5rem
             padding-top: .2rem
             margin: .25rem
+            fill: styles.$secondaryText
             
         .delete_icon
             width: 2rem
             height: 2rem
             margin: .25rem
-            
-        .note_head
-            background: styles.$theme_blue
-            border-top-right-radius: 10px
-            border-top-left-radius: 10px
+            stroke: styles.$secondaryText
+            color: styles.$secondaryText
             
         .note_body
-            padding: .5rem
+            display: flex
+            flex-direction: column
+            background: styles.$darkblue
+            padding: .25rem 1rem
             overflow: hidden
-            height: 9.5rem
-            
-        .note_div::after
-            content: ""
-            display: block
-            background-image: linear-gradient(to right, transparent , styles.$note_bg 80%)
-            height: 1rem
-            position: relative
-            bottom: 1rem
+            //height: 9.5rem
+            white-space: nowrap
+            text-overflow: ellipsis
+            justify-content: space-between
             
         .category
             display: block
-            height: .5rem
-            border-top-right-radius: 10px
-            border-top-left-radius: 10px
+            width: .25rem
+            height: 9.15rem
+            position: absolute
+            z-index: 500
             
         .row
             display: flex
             flex-direction: row
             justify-content: space-between
             
-        .icons
+        .body_section
+            display: flex
+            flex-direction: column
+            width: 100%
+        
+        .header_section
             display: flex
             flex-direction: row
             justify-content: space-between
+            color: styles.$secondaryText
+            width: 100%
             
+        .title
+            color: styles.$textWhite
+            font-size: 28px
+            margin: .5rem
+            width: 100%
+            
+        .footer
+            color: styles.$secondaryText
+            padding: .5rem 0
+            
+        .hr
+            background: styles.$secondaryText
+            height: .05rem
+            width: 100%
+            margin-bottom: .5rem
+            
+        .text_span 
+            width: 100%
+            color: styles.$textWhite
+            font-size: 20px
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+            
+        .date_container
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+        
     .full_text
         height: 100vh
         width: 100vw
